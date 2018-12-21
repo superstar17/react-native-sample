@@ -1,39 +1,26 @@
 import React from 'react';
-import { createDrawerNavigator, createStackNavigator, createMaterialTopTabNavigator } from 'react-navigation';
+import { createDrawerNavigator, createStackNavigator } from 'react-navigation';
+import { Platform } from 'react-native';
 import {
-  ProgressScreen,
-  MeditateScreen,
-  ResumeScreen,
+  MainContainer,
+  LoginScreen
 } from './containers';
 import { TabBar, SideMenu } from './components';
 
-const TopBar = createMaterialTopTabNavigator({
-  ResumeScreen: { screen: ResumeScreen },
-  ProgressScreen: { screen: ProgressScreen },
-  MeditateScreen: { screen: MeditateScreen },
-}, {
-  initialRouteName: 'ResumeScreen',
-  tabBarComponent: props => (<TabBar {...props} />),
-  tabBarOptions: {
-    activeTintColor: 'red',
-    indicatorStyle: {
-      backgroundColor: 'transparent'
-    }
-  }
-});
-
 const DrawerMenu = createDrawerNavigator({
-  TopBar: { screen: TopBar },
+  MainContainer: { screen: MainContainer },
 }, {
   contentComponent: props => <SideMenu {...props} />,
-  initialRouteName: 'TopBar'
+  initialRouteName: 'MainContainer'
 });
 
 const Routing = createStackNavigator({
-  DrawerMenu: { screen: DrawerMenu }
+  DrawerMenu: { screen: DrawerMenu },
+  LoginScreen: { screen: LoginScreen }
 }, {
   initialRouteName: 'DrawerMenu',
-  headerMode: 'none'
+  headerMode: 'none',
+  gesturesEnabled: Platform.OS !== 'ios'
 });
 
 export default Routing;

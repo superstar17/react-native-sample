@@ -1,2 +1,3 @@
 export { SideMenu } from './SideMenu';
-export { TabBar } from './TabBar';
+export { TopTabBar } from './TopTabBar';
+export { BottomTabBar } from './BottomTabBar';

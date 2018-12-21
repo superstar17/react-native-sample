@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import { Text, View } from 'react-native';
 import { styles } from './styles';
 
-class ProgressScreen extends Component {
+class MindfulnessScreen extends Component {
   static navigationOptions = {
-    title: 'Progress'
+    title: 'Mindfulness'
   };
   constructor(props) {
     super(props);
@@ -16,11 +16,11 @@ class ProgressScreen extends Component {
     return (
       <View style={styles.container}>
         <Text>
-          Progress
+          Mindfulness
         </Text>
       </View>
-    )
+    );
   }
 }
 
-export default ProgressScreen;
+export default MindfulnessScreen;

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-navigation';
-import { Text } from 'react-native';
+import { Text, View } from 'react-native';
 import { styles } from './styles';
 
 class MeditateScreen extends Component {
@@ -15,12 +14,12 @@ class MeditateScreen extends Component {
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <Text>
           Meditate
         </Text>
-      </SafeAreaView>
-    )
+      </View>
+    );
   }
 }
 

@@ -6,5 +6,13 @@ export const styles = StyleSheet.create({
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  loginBtnContainer: {
+    backgroundColor: 'green',
+    borderRadius: 10,
+    height: 40,
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 100
   }
 });

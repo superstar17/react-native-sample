@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { SafeAreaView } from 'react-navigation';
-import { Text } from 'react-native';
+import { View, Text } from 'react-native';
 import { styles } from './styles';
 
 class ResumeScreen extends Component {
@@ -15,11 +14,11 @@ class ResumeScreen extends Component {
 
   render() {
     return (
-      <SafeAreaView style={styles.container}>
+      <View style={styles.container}>
         <Text>
           Resume
         </Text>
-      </SafeAreaView>
+      </View>
     )
   }
 }

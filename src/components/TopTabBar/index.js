@@ -9,7 +9,7 @@ const titles = [
   'Meditate',
 ];
 
-export class TabBar extends Component {
+export class TopTabBar extends Component {
 
   constructor(props) {
     super(props);
@@ -20,22 +20,7 @@ export class TabBar extends Component {
 
 
   onNavigate = (index) => {
-    switch (index) {
-      case 0:
-        this.props.navigation.openDrawer();
-        break;
-      case 1:
-        this.props.navigation.navigate('ResumeScreen');
-        break;
-      case 2:
-        this.props.navigation.navigate('ProgressScreen');
-        break;
-      case 3:
-        this.props.navigation.navigate('MeditateScreen');
-        break;
-      default:
-        break;
-    }
+    this.props.onNavigate(index);
     if (index !== 0) {
       this.setState({ activeIndex: index });
     }

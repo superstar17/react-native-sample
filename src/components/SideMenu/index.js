@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { SafeAreaView } from 'react-navigation';
-import { Text } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
 
 export class SideMenu extends Component {
@@ -10,12 +10,18 @@ export class SideMenu extends Component {
     }
   }
 
+  onPress = () => {
+    this.props.navigation.navigate('LoginScreen');
+  };
+
   render() {
     return (
       <SafeAreaView style={styles.container}>
-        <Text>
-          SideMenu
-        </Text>
+        <TouchableOpacity style={styles.loginBtnContainer} onPress={this.onPress}>
+          <Text>
+            Log in
+          </Text>
+        </TouchableOpacity>
       </SafeAreaView>
     );
   }
